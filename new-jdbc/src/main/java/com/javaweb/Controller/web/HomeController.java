@@ -34,7 +34,7 @@ public class HomeController extends HttpServlet {
         String action = req.getParameter("action");
         if(action != null && action.equals("login")){
             UserModel model = FormUtil.toModel(UserModel.class, req);
-
+            //dang hoo den day...
         }
     }
 }

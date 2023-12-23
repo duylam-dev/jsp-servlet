@@ -1,7 +1,6 @@
 package com.javaweb.Service.impl;
 
 import com.javaweb.Dao.ICategoryDao;
-import com.javaweb.Dao.impl.CategoryDao;
 import com.javaweb.Model.CategoryModel;
 import com.javaweb.Service.ICategoryService;
 

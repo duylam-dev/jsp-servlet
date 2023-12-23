@@ -18,7 +18,7 @@
                         Xin chào, ${USERMODEL.fullName}
                     </a>
                     <li class="light-blue dropdown-modal">
-                        <a href="#">
+                        <a href="<c:url value='/dang-nhap?action=logout'/>">
                             <i class="ace-icon fa fa-power-off"></i>
                             Thoát
                         </a>

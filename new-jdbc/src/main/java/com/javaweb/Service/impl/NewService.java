@@ -34,9 +34,6 @@ public class NewService implements INewService {
 
     @Override
     public NewModel update(NewModel updateNew) {
-        NewModel oldIdNew = newDao.findOne(updateNew.getId());
-        updateNew.setCreatedDate(oldIdNew.getCreatedDate());
-        updateNew.setCreatedBy(oldIdNew.getCreatedBy());
         updateNew.setModifiedDate(new Timestamp(System.currentTimeMillis()));
         updateNew.setModifiedBy("");
         newDao.update(updateNew);

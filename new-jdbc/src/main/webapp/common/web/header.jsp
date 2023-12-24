@@ -14,10 +14,10 @@
                 </li>
                 <c:if test="${not empty USERMODEL}">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">${USERMODEL.fullName}</a>
-                    </li>\
+                        <a class="nav-link" href="#"> Welcome, ${USERMODEL.fullName}</a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<c:url value='/dang-nhap?action=logout'/>">Thoát</a>
+                        <a class="nav-link" href="<c:url value='/thoat?action=logout'/>">Thoát</a>
                     </li>
                 </c:if>
                 <c:if test="${empty USERMODEL}">

@@ -7,15 +7,17 @@ import com.javaweb.Mapper.RowMapper;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 
 public class AbstractDao<T> implements GenericDao<T> {
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("db");
     public Connection getConnection(){
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/newServlet";
-            String userName = "root";
-            String passWord = "";
+            Class.forName(resourceBundle.getString("driverName"));
+            String url = resourceBundle.getString("url");
+            String userName = resourceBundle.getString("user");
+            String passWord = resourceBundle.getString("password");
             return DriverManager.getConnection(url,userName,passWord);
         } catch (ClassNotFoundException | SQLException e) {
             return null;
